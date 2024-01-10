@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <div class="nav-main">
+            <div class="icon">
+                <a href="#">
+                    <img src="//lf-cdn-tos.bytescm.com/obj/static/atsx-fe/mainland/assets/935e8d45c2e1f5a212345b195c9090ec.png"
+                        alt="" class="logo">
+                </a>
+                <div class="pic">
+
+                </div>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <div class="word">职位</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </div>
+                <div class="item">
+                    <div class="word">答疑专区</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </div>
+                <div class="item">
+                    <div class="word">我的简历</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </div>
+                <div class="item">
+                    <div class="word">应聘记录</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </div>
+                <div class="item">
+                    <div class="word">登录</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper">
+        <div class="modal-main">
+            123
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-main">
+            <div class="item phone-login active">
+                <div class="title">手机号码登录</div>
+                <div class="toggle">
+                    <div class="desc">邮箱登录</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="phonenumber">
+                    <input type="number" placeholder="请输入手机号码">
+                </div>
+                <div class="Verification-code">
+                    <input type="number" placeholder="请输入验证码">
+                    <div class="icon"></div>
+                </div>
+
+                <button class="login-btn">登录</button>
+                <div class="login-tip">
+                    未注册的手机号码验证后将自动创建账号
+                </div>
+
+            </div>
+            <div class="item email-login">
+                <div class="title">邮箱登录</div>
+                <div class="toggle">
+                    <div class="desc">手机号登录</div>
+                    <div class="icon"></div>
+                </div>
+                <div class="email-account">
+                    <input type="email" placeholder="邮箱">
+                </div>
+                <div class="email-password">
+                    <input type="password" placeholder="密码">
+                    <div class="icon"></div>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">忘记密码？</a>
+                </div>
+                <button class="login-btn">登录</button>
+                <div class="login-tip">
+                    没有邮箱账号？
+                    <a href="#">创建账号</a>
+                </div>
+            </div>
+            <div class="third-login">
+                <span>第三方账号快速登录</span>
+                <div class="third-login-icon">
+                    <a href="#" class="facebook">
+                        <img src="./images/douyin1.png" alt="">
+                    </a>
+                    <a href="#" class="lingying">
+                        <img src="./images/douyin1.png" alt="">
+                    </a>
+                    <a href="#" class="douyin">
+                        <img src="./images/douyin1.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <div class="user-agreement">
+                <input type="checkbox">
+                同意
+                <a href="#">用户协议</a>
+                与
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function () {
+            // 导航栏
+            $(".nav-main .icon .pic").on("click", function () {
+                $(".nav-main").toggleClass("active");
+                // 判断模态框的隐藏与显示
+                if ($(".nav-main").hasClass("active")) {
+                    $(".modal-wrapper").css("display", "block");
+                } else {
+                    $(".modal-wrapper").css("display", "none");
+                }
+                $(".modal-wrapper").on("click", function () {
+                    $(".nav-main").removeClass("active");
+                    $(this).css("display", "none");
+                })
+            });
+            // 内容
+            $(".content-main .item .toggle").on("click", function (e) {
+                e.stopPropagation();
+                $(this).parent(".item").removeClass("active").siblings().addClass("active");
+            })
+        })
+    </script>
+
+</body>
+
+</html>

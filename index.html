@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字节跳动校园招聘</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet icon" href="./images/icon.jpg">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-wrapper">
+        <div class="nav-main">
+            <div class="icon">
+                <div class="pic">
+
+                </div>
+            </div>
+            <div class="list">
+                <a href="./job.html" class="item">
+                    <div class="word">职位</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </a>
+                <a href="/" class="item">
+                    <div class="word">答疑专区</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </a>
+                <a href="/" class="item">
+                    <div class="word">我的简历</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </a>
+                <a href="/" class="item">
+                    <div class="word">应聘记录</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </a>
+                <a href="./login.html" class="item">
+                    <div class="word">登录</div>
+                    <img class="arrow" src="./images/right-arrow.png"></img>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="content-wrapper">
+        <div class="content-main">
+            <div class="list">
+                <a href="./job.html" class="item">
+                    <div class="info">
+                        <div class="title">
+                            应届生投递
+                        </div>
+                        <div class="desc">
+                            面向 2023 年 9 月 - 2024 年 8 月期间毕业的学生
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="/images/graduate_pic.png" alt="">
+                    </div>
+                </a>
+                <a href="./job.html" class="item">
+                    <div class="info">
+                        <div class="title">
+                            实习生投递
+                        </div>
+                        <div class="desc">
+                            - ByteIntern：面向2024届毕业生，提供转正机会
+                        </div>
+                        <div class="desc">
+                            - 日常实习：面向全体在校生，提供实践机会
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="/images/internship_pic.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal-wrapper">
+        <div class="modal-main">
+            123
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".nav-main .icon .pic").on("click", function () {
+                $(".nav-main").toggleClass("active");
+                // 判断模态框的隐藏与显示
+                if ($(".nav-main").hasClass("active")) {
+                    $(".modal-wrapper").css("display", "block");
+                } else {
+                    $(".modal-wrapper").css("display", "none");
+                }
+                $(".modal-wrapper").on("click", function () {
+                    $(".nav-main").removeClass("active");
+                    $(this).css("display", "none");
+                })
+            });
+
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -204,6 +204,8 @@ body {
 .content-body-wrapper .content-body-main{
     margin-top: 10px;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 .content-body-wrapper .content-body-main .item{
     display: inline-block;
@@ -242,5 +244,4 @@ body {
     background-repeat: no-repeat;
     background-size: 70% 70%;
     background-position: center;
-    
 }

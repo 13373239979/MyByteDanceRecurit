@@ -7,20 +7,30 @@
  }
  
  .area-content-main{
-    padding: 0 20px;
+   
 }
 .area-content-main .content-header{
     line-height: 53px;
     height: 53px;
     font-size: 15px;
     color:#1F2329;
+    padding: 0 20px;
 }
 .area-content-main .search-content-wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 66px;
+    background-color: #ffffff;
+    padding: 0 20px;
 }
+/* .area-content-main .search-content-wrapper.active {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+} */
 .area-content-main .search-content-wrapper .search-content-main{
     flex: 1;
     position: relative;

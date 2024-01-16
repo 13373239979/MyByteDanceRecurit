@@ -148,9 +148,13 @@ a{
     font-size: 15px;
     margin-right: 5px;
 }
+/* bug修改 */
 .content-main .item .Verification-code{
     padding: 12px 5px;
     font-size: 15px;
+    /* 我的代码 */
+    display: flex;
+    flex-direction: row;
 }
 .content-main .item .Verification-code .code-label{
     display: inline-block;
@@ -160,6 +164,7 @@ a{
     outline: none;
     border: none;
     font-size: 15px;
+    flex: 1;
 }
 .content-main .item .Verification-code .code-get{
     color: #3370ff;

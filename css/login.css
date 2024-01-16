@@ -157,18 +157,19 @@ a{
     flex-direction: row;
 }
 .content-main .item .Verification-code .code-label{
-    display: inline-block;
-    width: 62px;
+   padding: 0 20px 0px 0px;
 }
 .content-main .item .Verification-code input{
     outline: none;
     border: none;
-    font-size: 15px;
     flex: 1;
+    width: 100px;
+    font-size: 15px;
 }
 .content-main .item .Verification-code .code-get{
     color: #3370ff;
     opacity: 0.5;
+    flex-wrap: nowrap;
 }
 
 .content-main .item .phonenumber .phone-area-select img{
@@ -289,8 +290,8 @@ a{
 .content-main .third-login .third-login-icon a  {
 	/* -moz-user-focus: none;
     -moz-user-select: none; */
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    /* -webkit-tap-highlight-color: transparent; */
+    /* -webkit-tap-highlight-color:rgba(0,0,0,0); */
+    -webkit-tap-highlight-color: transparent;
     /* outline:none;
     background: none;
     text-decoration: none; */

@@ -218,7 +218,7 @@ body {
 }
 .content-body-wrapper .content-body-main .item  .job-desc{
     font-size: 0.7rem;
-    color: #646a73
+    color: #646a73;
 }
 .content-body-wrapper .content-body-main .item  .job-desc .division{
     display: inline-block;
@@ -226,7 +226,6 @@ body {
     height: 0.5rem;
     background-color: #bbbfc4;
     margin: 0 0.4rem;
-    
 }
 
 /* 分享 */

@@ -102,9 +102,14 @@ a{
 .content-wrapper .content-main .content-text .official-account .official-account-link .official-account-link-main .link-word{
     padding-right: 16px;
 }
+.content-wrapper .content-main .content-text .official-account .official-account-link .official-account-link-main .icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .content-wrapper .content-main .content-text .official-account .official-account-link .official-account-link-main .icon img{
-    background-color: #0e02024d;
-    width: 10px;
+    /* background-color: #0e02024d; */
+    width: 20px;
     height: 20px;
 }
 .content-wrapper .content-main .content-text .official-account .official-account-link .official-account-link-main .link-word .word-title{
@@ -114,8 +119,12 @@ a{
     margin-top: 4px;
     font-size: 14px;
     color: #0000008C;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
 }
 .content-wrapper .content-main .content-text .official-account .official-account-link .official-account-link-main .link-word .word-tips{

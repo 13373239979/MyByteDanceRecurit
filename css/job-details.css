@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+.nav-main {
+    position: relative;
+    height: 44px;
+    z-index: 5;
+    background-color: #ffffff;
+}
+.nav-main .icon {
+    position: relative;
+    height: 44px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+/* .nav-main .icon a {
+    margin-left: 20px;
+}
+.nav-main .icon a .logo{
+    height: 24px;
+    
+} */
+.nav-main .icon .pic {
+    position: absolute;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/menu.png");
+    background-size: 100% 100%;
+
+}
+.nav-main.active .icon .pic {
+    position: absolute;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/closed.png");
+    background-size: 100% 100%;
+}
+.nav-main .icon .pic img {
+    width: 100%;
+    height: 100%;
+}
+.nav-main  .list {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 44px;
+    width: 100%;
+}
+.nav-main  .list .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50.5px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-main  .list .item  .arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-main.active  .list {
+    display: block;
+}
+/* 模态框 */
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+    opacity: 0.1;
+    background-color: rgba(19, 16, 16, 0.5);
+}
+.jobDetail-content-wrapper {
+    padding: 16px 20px 64px;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetail-title{
+    border-bottom: 1px solid #dee0e3;
+}
+
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetail-title .job-title{
+    color: #1F2329;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetail-title .job-info span{
+    color: #646A73;
+    font-size: 14px;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetail-title .job-info .line-devider{
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #bbbfc4;
+    margin: 0 2px;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetil-block-title::before{
+    display: inline-block;
+    content: '';
+    width: 1.5px;
+    height: 12px;
+    background: #3370ff;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetil-block-title{
+    font-size: 16px;
+    color: #1F2329;
+    margin: 20px 0px 12px;
+    font-weight: 700;
+}
+.jobDetail-content-wrapper .jobDetail-content-main .jobDetail-block-content{
+    /* pre-line在每一行文字处换行 */
+    white-space: pre-line;
+    word-break: break-word;
+    font-size: 14px;
+    color: #646a73;
+}
